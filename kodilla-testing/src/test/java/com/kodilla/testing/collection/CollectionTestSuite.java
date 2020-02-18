@@ -42,5 +42,8 @@ public class CollectionTestSuite {
          //When
          ArrayList<Integer> evenNumbers = oddNumbersExterminator.exterminate(numbers);
          //Then
+         if (evenNumbers.size()>0){
+             Assert.assertTrue("Not empty", false);
+         }
      }
 }
