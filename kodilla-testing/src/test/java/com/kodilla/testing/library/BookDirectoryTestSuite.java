@@ -33,8 +33,7 @@ public class BookDirectoryTestSuite {
         resultListOfBooks.add(book2);
         resultListOfBooks.add(book3);
         resultListOfBooks.add(book4);
-        when(libraryDatabaseMock.listBooksWithCondition("Secret"))
-                .thenReturn(resultListOfBooks);
+        when(libraryDatabaseMock.listBooksWithCondition("Secret")).thenReturn(resultListOfBooks);
 
         // When
         List<Book> theListOfBooks = bookLibrary.listBooksWithCondition("Secret");
@@ -84,6 +83,10 @@ public class BookDirectoryTestSuite {
         // Then
         assertEquals(0, theListOfBooks10.size());
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
+    }
+    @Test
+    public void testListBooksInHandsOf0 () {
+
     }
 
 
