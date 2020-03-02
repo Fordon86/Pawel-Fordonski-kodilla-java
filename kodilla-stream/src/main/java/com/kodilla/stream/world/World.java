@@ -15,12 +15,14 @@ public class World {
     public void setContinentList (List<Continent> continentList){
         this.continentList=continentList;
     }
-/*    public BigDecimal getPeopleQuantity (){
+    public BigDecimal getPeopleQuantity (){
 
-       continentList.stream().flatMap(continent -> continent.getCountryList().stream())
-               .filter(country -> country != this)
-               .collect()
-    }*/
+        BigDecimal result = continentList.stream().flatMap(continent -> continent.getCountryList().stream())
+               .map(Country::getPeopleQuantity)
+               .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
+
+       return result;
+    }
 
 
 }

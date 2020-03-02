@@ -1,11 +1,14 @@
 package com.kodilla.stream.portfolio;
 
+import java.time.temporal.ChronoUnit;
 import org.junit.Assert;
 import org.junit.Test;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import static java.time.temporal.ChronoUnit.DAYS;
 import static java.util.stream.Collectors.toList;
 
 
@@ -144,17 +147,23 @@ public class BoardTestSuite {
         Board project = prepareTestData();
 
         //When
-        List<TaskList> averageWorkingOnTask = new ArrayList<>();
-        averageWorkingOnTask.add(new TaskList("In progress"));
-        long taskAverage = project.getTaskLists().stream()
-                .filter(averageWorkingOnTask::contains)
+        List<TaskList> workingOnTasks = new ArrayList<>();
+        workingOnTasks.add(new TaskList("In progress"));
+        long taskCount = project.getTaskLists().stream()
+                .filter(workingOnTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                .map(t->t.getDeadline())
-                .filter(d -> d.compareTo(LocalDate.now().minusDays(10)) <= 0)
                 .count();
 
-        System.out.println(taskAverage);
-        //System.out.println(tasks);
+        long taskHours = project.getTaskLists().stream()
+                .filter(workingOnTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .map(task->DAYS.between(task.getCreated(),LocalDate.now()))
+                .reduce(0L, (x, y) -> x + y);
+
+        double average = taskHours / taskCount;
+
+        //Then
+        Assert.assertEquals(10.0, average,0.001);
 
     }
 }
