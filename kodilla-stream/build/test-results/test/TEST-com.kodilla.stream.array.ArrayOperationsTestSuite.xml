@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.stream.array.ArrayOperationsTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-01T21:09:32" hostname="Fordon" time="0.005">
-  <properties/>
-  <testcase name="testGetAverage" classname="com.kodilla.stream.array.ArrayOperationsTestSuite" time="0.005"/>
-  <system-out><![CDATA[2 4 5 2 3 4 5 7 2 3 3 4 5 8 3 2 3 1 7 3 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
