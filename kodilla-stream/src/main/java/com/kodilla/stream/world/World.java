@@ -15,9 +15,11 @@ public class World {
     public void setContinentList (List<Continent> continentList){
         this.continentList=continentList;
     }
-   /* public BigDecimal getPeopleQuantity (){
+/*    public BigDecimal getPeopleQuantity (){
+
        continentList.stream().flatMap(continent -> continent.getCountryList().stream())
-                .filter(country -> country != this)
+               .filter(country -> country != this)
+               .collect()
     }*/
 
 

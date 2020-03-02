@@ -72,7 +72,8 @@ public class BoardTestSuite {
         project.addTaskList(taskListDone);
         return project;
 
-            }
+    }
+
     @Test
     public void testAddTaskList() {
         //Given
@@ -93,7 +94,6 @@ public class BoardTestSuite {
                 .flatMap(l -> l.getTasks().stream())
                 .filter(t -> t.getAssignedUser().equals(user))
                 .collect(toList());
-
         //Then
         Assert.assertEquals(2, tasks.size());
         Assert.assertEquals(user, tasks.get(0).getAssignedUser());
@@ -114,14 +114,14 @@ public class BoardTestSuite {
                 .flatMap(tl -> tl.getTasks().stream())
                 .filter(t -> t.getDeadline().isBefore(LocalDate.now()))
                 .collect(toList());
-        System.out.println(tasks);
-    /*    //Then
+
+        //Then
         Assert.assertEquals(1, tasks.size());
-        Assert.assertEquals("HQLs for analysis", tasks.get(0).getTitle());*/
+        Assert.assertEquals("HQLs for analysis", tasks.get(0).getTitle());
     }
 
     @Test
-    public void theAddTaskListFindLongTask() {
+    public void testAddTaskListFindLongTasks() {
         //Given
         Board project = prepareTestData();
 
@@ -132,29 +132,29 @@ public class BoardTestSuite {
                 .filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
                 .map(t -> t.getCreated())
-                .filter(d -> d.compareTo(LocalDate.now().minusDays(0)) <= 0)
+                .filter(d -> d.compareTo(LocalDate.now().minusDays(10)) <= 0)
                 .count();
-        //Then
-        Assert.assertEquals(0, longTasks);
-    }
 
- /*   @Test public void testAddTaskListAverageWorkingOnTask() {
+        //Then
+        Assert.assertEquals(2, longTasks);
+    }
+    @Test
+    public void testAddTaskListAverageWorkingOnTask(){
         //Given
         Board project = prepareTestData();
 
         //When
-        List<TaskList> undoneTasks = new ArrayList<>();
-        undoneTasks.add(new TaskList("To do"));
-        undoneTasks.add(new TaskList("In progress"));
-        List<Task> tasks = project.getTaskLists().stream()
-                .filter(undoneTasks::contains)
-                .flatMap(tl->tl.getTasks().stream())
-                .map(t->t.getCreated())
-                .filter(d -> d.compareTo(LocalDate.now().minusDays(0)) <= 0)
+        List<TaskList> averageWorkingOnTask = new ArrayList<>();
+        averageWorkingOnTask.add(new TaskList("In progress"));
+        long taskAverage = project.getTaskLists().stream()
+                .filter(averageWorkingOnTask::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .map(t->t.getDeadline())
+                .filter(d -> d.compareTo(LocalDate.now().minusDays(10)) <= 0)
                 .count();
 
-        System.out.println(tasks);
+        System.out.println(taskAverage);
+        //System.out.println(tasks);
 
-    }*/
-
+    }
 }

@@ -3,7 +3,7 @@ package com.kodilla.stream.portfolio;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Board {
+public final class Board {
     private final List<TaskList> taskLists = new ArrayList<>();
     private final String name;
 
@@ -11,16 +11,16 @@ public class Board {
         this.name = name;
     }
 
-    public List<TaskList> getTaskLists() {
-        return new ArrayList<>(taskLists);
-    }
-
-    public void addTaskList (TaskList taskList) {
+    public void addTaskList(TaskList taskList) {
         taskLists.add(taskList);
     }
 
-    public boolean removeTaskList (TaskList taskList) {
-        return removeTaskList(taskList);
+    public boolean removeTaskList(TaskList taskList) {
+        return taskLists.remove(taskList);
+    }
+
+    public List<TaskList> getTaskLists() {
+        return new ArrayList<>(taskLists);
     }
 
     public String getName() {
@@ -29,9 +29,9 @@ public class Board {
 
     @Override
     public String toString() {
-        return "Board{" +
-                "taskLists=" + taskLists +
-                ", name='" + name + '\'' +
+        return "Board{" + "\n" +
+                "name='" + name + '\'' + ",\n" +
+                "taskLists=" + taskLists + "\n" +
                 '}';
     }
 }
