@@ -1,9 +1,6 @@
 package com.kodilla.stream.world;
 
-import com.kodilla.stream.sand.SandStorage;
-import com.kodilla.stream.world.Continent;
-import com.kodilla.stream.world.Country;
-import com.kodilla.stream.world.World;
+import org.junit.Assert;
 import org.junit.Test;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -14,12 +11,12 @@ public class WorldTestSuite {
         public World prepareTestData() {
 
             //country
-            Country country1 = new Country(new BigDecimal("211111110903703703670"));
-            Country country2 = new Country(new BigDecimal("211111110903703703670"));
-            Country country3 = new Country(new BigDecimal("211111110903703703670"));
-            Country country4 = new Country(new BigDecimal("211111110903703703670"));
-            Country country5 = new Country(new BigDecimal("211111110903703703670"));
-            Country country6 = new Country(new BigDecimal("211111110903703703670"));
+            Country country1 = new Country(new BigDecimal("1"));
+            Country country2 = new Country(new BigDecimal("2"));
+            Country country3 = new Country(new BigDecimal("3"));
+            Country country4 = new Country(new BigDecimal("4"));
+            Country country5 = new Country(new BigDecimal("5"));
+            Country country6 = new Country(new BigDecimal("6"));
 
             List<Country> countryList1 = new ArrayList<>();
             countryList1.add(country1);
@@ -35,13 +32,13 @@ public class WorldTestSuite {
             Continent continent1 = new Continent(countryList1);
             Continent continent2 = new Continent(countryList2);
             Continent continent3 = new Continent(countryList3);
-            List<Continent> getContinentList = new ArrayList<>();
-            getContinentList.add(continent1);
-            getContinentList.add(continent2);
-            getContinentList.add(continent3);
+            List<Continent> continentList = new ArrayList<>();
+            continentList.add(continent1);
+            continentList.add(continent2);
+            continentList.add(continent3);
 
             //world
-            World world = new World(getContinentList);
+            World world = new World(continentList);
             return world;
 
         }
@@ -53,16 +50,11 @@ public class WorldTestSuite {
         World world = prepareTestData();
 
         //When
-        //world.result
-        //System.out.println(World.getPeopleQuantity);
-        /*BigDecimal getPeopleQuantity = world.stream()
-                .flatMap(continent -> continent.getCountryList().stream())
-                .map(Country::getPeopleQuantity)
-                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));*/
+        BigDecimal result = world.getPeopleQuantity();
 
-        //  }
+        //Them
+        Assert.assertEquals(new BigDecimal(21), result);
     }
-
 
 }
 

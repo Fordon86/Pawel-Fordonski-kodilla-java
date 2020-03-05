@@ -4,11 +4,11 @@ import java.util.HashMap;
 
 public class Flightfinder {
 
-    public void findFlight (Flight flight){
+    public void findFlight (Flight flight) throws RouteNotFoundException {
 
         HashMap<String,Boolean> flightPlan = new HashMap<>();
 
-        flightPlan.put("Poznan", true);
+        flightPlan.put("Poznan", false);
         flightPlan.put("Berlin", true);
         flightPlan.put("London", true);
         flightPlan.put("Bratislava", true);
@@ -22,13 +22,8 @@ public class Flightfinder {
             }
         }
 
-        else try {
-            throw new Exception();
+        else { throw new RouteNotFoundException();
 
-        } catch (Exception e) {
-            System.out.println("Airport don't exist");
         }
-
     }
-
 }
