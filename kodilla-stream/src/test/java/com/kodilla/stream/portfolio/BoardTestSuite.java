@@ -149,21 +149,27 @@ public class BoardTestSuite {
         //When
         List<TaskList> workingOnTasks = new ArrayList<>();
         workingOnTasks.add(new TaskList("In progress"));
-        long taskCount = project.getTaskLists().stream()
+/*        long taskCount = project.getTaskLists().stream()
                 .filter(workingOnTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
                 .count();
 
         long taskHours = project.getTaskLists().stream()
                 .filter(workingOnTasks::contains)
-                .flatMap(tl -> tl.getTasks().stream())
+                .flatMap(t2 -> t2.getTasks().stream())
                 .map(task->DAYS.between(task.getCreated(),LocalDate.now()))
-                .reduce(0L, (x, y) -> x + y);
+                .reduce(0L, (x, y) -> x + y);*/
 
-        double average = taskHours / taskCount;
+        double taskHours = project.getTaskLists().stream()
+                .filter(workingOnTasks::contains)
+                .flatMap(t2 -> t2.getTasks().stream())
+                .mapToLong(task->DAYS.between(task.getCreated(),LocalDate.now()))
+                .average().getAsDouble();
+
+       // double average = taskHours / taskCount;
 
         //Then
-        Assert.assertEquals(10.0, average,0.001);
+        Assert.assertEquals(10.0, taskHours,0.001);
 
     }
 }
