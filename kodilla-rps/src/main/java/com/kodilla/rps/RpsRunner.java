@@ -3,10 +3,10 @@ package com.kodilla.rps;
 import java.util.Scanner;
 
 public class RpsRunner {
-    static int roundsToEnd = 1;
-    static int numberUserWin = 0;
-    static int numberOpponentWin = 0;
-    static int draw = 0;
+    static int roundsToEnd;
+    static int numberUserWin;
+    static int numberOpponentWin;
+    static int draw;
     public static void main(String[] args){
 
         Scanner scan = new Scanner(System.in);
