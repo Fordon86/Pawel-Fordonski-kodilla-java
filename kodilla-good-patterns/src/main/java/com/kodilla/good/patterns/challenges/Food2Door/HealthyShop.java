@@ -1,4 +1,4 @@
 package com.kodilla.good.patterns.challenges.Food2Door;
 
-public class ShopInfo {
+public class HealthyShop {
 }

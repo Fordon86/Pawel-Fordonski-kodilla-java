@@ -1,11 +1,11 @@
-package com.kodilla.good.patterns.challenges;
+package com.kodilla.good.patterns.challenges.repositories;
 
 public class Product {
 
     private String productName;
-    private double productPrice;
+    private int productPrice;
 
-    private void productOrder(String productName, double productPrice) {
+    public Product (String productName, int productPrice) {
         this.productName = productName;
         this.productPrice = productPrice;
     }
@@ -14,7 +14,7 @@ public class Product {
         return productName;
     }
 
-    public double getProductPrice() {
+    public int getProductPrice() {
         return productPrice;
     }
 
