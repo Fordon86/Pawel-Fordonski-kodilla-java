@@ -1,18 +1,16 @@
 package com.kodilla.rps;
 
-import static com.kodilla.rps.FinalResult.*;
+public class ResultPrinter {
 
-public class PrintResult {
+    public static void printResult(GameLoop gameLoop){
 
-    public static void printResult(){
-
-        if (numberUserWin > numberOpponentWin) {
+        if (gameLoop.getNumberUserWin() > gameLoop.getNumberOpponentWin()) {
             System.out.println("You win this game!");
-        } else if (numberOpponentWin > numberUserWin) {
+        } else if (gameLoop.getNumberOpponentWin() > gameLoop.getNumberUserWin()) {
             System.out.println("You lost this game!");
-        } else if (draw >= numberUserWin ) {
+        } else if (gameLoop.getDraw() >= gameLoop.getNumberUserWin() ) {
             System.out.println("Is a draw!");
-        } else if (draw >= numberOpponentWin) {
+        } else if (gameLoop.getDraw() >= gameLoop.getNumberOpponentWin()) {
             System.out.println("Is a draw!");
         } else {
             System.out.println("Is a draw!");
