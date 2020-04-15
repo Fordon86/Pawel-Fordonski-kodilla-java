@@ -15,4 +15,24 @@ public class Airport {
     public void setAirportName(String airportName) {
         this.airportName = airportName;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Airport)) return false;
+
+        Airport airport = (Airport) o;
+
+        return airportName != null ? airportName.equals(airport.airportName) : airport.airportName == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return airportName != null ? airportName.hashCode() : 0;
+    }
+
+    @Override
+    public String toString() {
+        return airportName;
+    }
 }

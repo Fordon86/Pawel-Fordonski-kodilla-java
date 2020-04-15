@@ -1,32 +1,35 @@
 package com.kodilla.good.patterns.challenges.FlightFinder;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FlightFinder {
 
-    private static Wroclaw wroclaw = new Wroclaw();
-    private static Warszawa warszawa = new Warszawa();
-    private static Gdansk gdansk = new Gdansk();
-    private static Berlin berlin = new Berlin();
+    private static Airport wroclaw = new Airport("Wroclaw");
+    private static Airport warszawa = new Airport("Warszawa");
+    private static Airport gdansk = new Airport("Gdansk");
+    private static Airport berlin = new Airport("Berlin");
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        List<FlightConnection> flightsConnectionList = new ArrayList<>();
+        flightsConnectionList.add(new FlightConnection(wroclaw, warszawa));
+        flightsConnectionList.add(new FlightConnection(gdansk, warszawa));
+        flightsConnectionList.add(new FlightConnection(berlin, wroclaw));
+        flightsConnectionList.add(new FlightConnection(gdansk, wroclaw));
+        flightsConnectionList.add(new FlightConnection(warszawa, wroclaw));
+        flightsConnectionList.add(new FlightConnection(wroclaw, berlin));
 
-        Set<Airport> wroclawFlightFinder = wroclaw.getFlightPlan();
-        Set<Airport> warszawaFlightFinder = warszawa.getFlightPlan();
-        Set<Airport> gdanskFlightFinder = gdansk.getFlightPlan();
-        Set<Airport> berlinFlightFinder = berlin.getFlightPlan();
+        FlightPlan flightPlanFrom = new FlightPlan(flightsConnectionList);
+        List <FlightConnection> flightsFromWroclaw = flightPlanFrom.findFlightFromAirport(wroclaw);
+        System.out.println(flightsFromWroclaw);
 
-        HashSet<Set> airportsSet = new HashSet<Set>();
-        airportsSet.add(wroclawFlightFinder);
-        airportsSet.add(warszawaFlightFinder);
-        airportsSet.add(gdanskFlightFinder);
-        airportsSet.add(berlinFlightFinder);
+        FlightPlan flightPlanTo = new FlightPlan(flightsConnectionList);
+        List <FlightConnection> flightsToWroclaw = flightPlanTo.findFlightToAirport(wroclaw);
+        System.out.println(flightsToWroclaw);
 
-        System.out.println(airportsSet.size());
-
-        System.out.println(airportsSet.contains(warszawaFlightFinder));
-
-        //String result = airportsSet.
+        FlightPlan flightPlanFromViaTo = new FlightPlan(flightsConnectionList);
+        List <FlightConnection> flightsFromViaToWroclaw = flightPlanFromViaTo.findFlightFromToViaAirport(warszawa, berlin, wroclaw);
+        System.out.println(flightsFromViaToWroclaw);
     }
 
 }
