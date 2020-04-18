@@ -23,5 +23,4 @@ public class Logger {
     public String getLastLog() {
         return lastLog;
     }
-
 }

@@ -20,4 +20,5 @@ public class LoggerTestSuite {
         //Then
         Assert.assertEquals("Zdzich", lastLog);
     }
+
 }
