@@ -41,4 +41,5 @@ public class LibraryTestSuite {
         Assert.assertEquals(2, clonedLibrary.getBooks().size());
         Assert.assertEquals(3, deepClonedLibrary.getBooks().size());
     }
+
 }

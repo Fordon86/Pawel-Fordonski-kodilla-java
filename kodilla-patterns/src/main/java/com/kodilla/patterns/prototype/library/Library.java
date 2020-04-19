@@ -1,7 +1,6 @@
 package com.kodilla.patterns.prototype.library;
 
 import com.kodilla.patterns.prototype.Prototype;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -46,4 +45,5 @@ public final class Library extends Prototype {
         }
         return clonedLibrary;
     }
+
 }

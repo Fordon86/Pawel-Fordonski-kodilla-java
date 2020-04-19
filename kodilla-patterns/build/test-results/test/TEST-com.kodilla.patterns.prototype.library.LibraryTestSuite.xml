@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-19T19:03:53" hostname="Fordon" time="0.031">
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-19T19:06:07" hostname="Fordon" time="0.024">
   <properties/>
-  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.031"/>
-  <system-out><![CDATA[Library{name='Drama', books=[Book{title='Book1', author='Zdzich1', publicationDate=1981}, Book{title='Book2', author='Zdzich2', publicationDate=1982}]}
-Library{name='Clone Drama 1', books=[Book{title='Book1', author='Zdzich1', publicationDate=1981}, Book{title='Book2', author='Zdzich2', publicationDate=1982}]}
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.024"/>
+  <system-out><![CDATA[Library{name='Drama', books=[Book{title='Book2', author='Zdzich2', publicationDate=1982}, Book{title='Book1', author='Zdzich1', publicationDate=1981}]}
+Library{name='Clone Drama 1', books=[Book{title='Book2', author='Zdzich2', publicationDate=1982}, Book{title='Book1', author='Zdzich1', publicationDate=1981}]}
 Library{name='Clone Drama 2', books=[Book{title='Book1', author='Zdzich1', publicationDate=1981}, Book{title='Book3', author='Zdzich3', publicationDate=1983}, Book{title='Book2', author='Zdzich2', publicationDate=1982}]}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -1,7 +1,5 @@
 package com.kodilla.patterns.prototype.library;
 
-import java.time.LocalDate;
-
 public final class Book {
     final String title;
     final String author;
@@ -24,6 +22,7 @@ public final class Book {
     public int getPublicationDate() {
         return publicationDate;
     }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -32,4 +31,5 @@ public final class Book {
                 ", publicationDate=" + publicationDate +
                 '}';
     }
+
 }
