@@ -14,8 +14,8 @@ public class BoardConfig {
     public Board getBoard (){
         Board board = new Board();
         board.setToDoList(getTaskToDo());
-        board.setToDoList(getTaskInProgress());
-        board.setToDoList(getDone());
+        board.setInProgressList(getTaskInProgress());
+        board.setDoneList(getDone());
 
         return board;
     }

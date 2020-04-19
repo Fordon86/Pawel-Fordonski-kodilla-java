@@ -1,6 +1,7 @@
 package com.kodilla.spring.portfolio;
 
 import com.kodilla.spring.calculator.Calculator;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,9 +17,9 @@ public class BoardTestSuite {
     public void test() {
         //Given
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
-        Calculator calculator = (Calculator) context.getBean(Calculator.class);
+        TaskList taskList = context.getBean(TaskList.class);
         //When
-        double addResult = calculator.add(5, 3);
+        //Assert.assertEquals(3, taskList.size()),
         //Then
         //
     }

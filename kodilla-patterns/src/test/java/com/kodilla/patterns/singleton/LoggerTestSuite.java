@@ -7,7 +7,6 @@ import org.junit.Test;
 public class LoggerTestSuite {
 
     @BeforeClass
-
     public static void addLog (){
         Logger.getInstance().log("Zdzich");
     }
