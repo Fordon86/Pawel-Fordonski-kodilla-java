@@ -1,3 +1,5 @@
-™Library{name='Drama', books=[Book{title='Book2', author='Zdzich2', publicationDate=1982}, Book{title='Book1', author='Zdzich1', publicationDate=1981}]}
-¡Library{name='Clone Drama 1', books=[Book{title='Book2', author='Zdzich2', publicationDate=1982}, Book{title='Book1', author='Zdzich1', publicationDate=1981}]}
-ÞLibrary{name='Clone Drama 2', books=[Book{title='Book1', author='Zdzich1', publicationDate=1981}, Book{title='Book3', author='Zdzich3', publicationDate=1983}, Book{title='Book2', author='Zdzich2', publicationDate=1982}]}
+?Steven should: [Conservative predictor] Buy debentures of XYZ
+<Steven now should: [Aggressive predictor] Buy stock of XYZ
+?Steven should: [Conservative predictor] Buy debentures of XYZ
+6John should: [Aggressive predictor] Buy stock of XYZ
+CKodilla should: [Balanced predictor] Buy shared units of Fund XYZ

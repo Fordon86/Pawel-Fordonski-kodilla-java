@@ -19,9 +19,9 @@ public class BoardTestSuite {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         TaskList taskList = context.getBean(TaskList.class);
         //When
-        //Assert.assertEquals(3, taskList.size()),
+        //taskList.getClass()
         //Then
-        //
+        //Assert.assertEquals(3, taskList.size()),
     }
 
 
