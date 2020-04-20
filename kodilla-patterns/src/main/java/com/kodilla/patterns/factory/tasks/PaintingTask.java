@@ -24,4 +24,5 @@ public class PaintingTask implements Task{
     public Boolean isTaskExecuted(){
         return true;
     }
+
 }

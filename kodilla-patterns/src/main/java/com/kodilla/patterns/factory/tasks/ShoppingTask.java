@@ -24,4 +24,5 @@ public class ShoppingTask implements Task{
     public Boolean isTaskExecuted(){
         return false;
     }
+
 }

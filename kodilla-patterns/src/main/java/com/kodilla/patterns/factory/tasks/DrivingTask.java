@@ -1,4 +1,5 @@
 package com.kodilla.patterns.factory.tasks;
+
 public class DrivingTask implements Task{
     private String taskName;
     private String where;
@@ -23,4 +24,5 @@ public class DrivingTask implements Task{
     public Boolean isTaskExecuted(){
         return false;
     }
+
 }

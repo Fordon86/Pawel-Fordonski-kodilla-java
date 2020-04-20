@@ -1,4 +1,5 @@
 package com.kodilla.patterns.factory.tasks;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -32,4 +33,5 @@ public class TaskFactoryTestSuite {
         //Then
         Assert.assertEquals("[Where to go : ] + where + [ by ] + using", driving.getTaskName());
     }
+
 }

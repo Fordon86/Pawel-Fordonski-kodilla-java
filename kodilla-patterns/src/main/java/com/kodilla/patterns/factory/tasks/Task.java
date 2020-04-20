@@ -4,4 +4,5 @@ public interface Task {
     String executeTask();
     String getTaskName();
     Boolean isTaskExecuted();
+
 }
