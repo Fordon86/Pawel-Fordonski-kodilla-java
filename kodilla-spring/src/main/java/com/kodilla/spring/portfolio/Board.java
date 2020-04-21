@@ -29,4 +29,5 @@ public class Board {
     public void setDoneList(TaskList doneList) {
         this.doneList = doneList;
     }
+
 }

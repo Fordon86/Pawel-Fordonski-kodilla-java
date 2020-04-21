@@ -11,12 +11,10 @@ import java.util.List;
 
 @Configuration
 public class BoardConfig {
-    @Autowired
     @Qualifier("tasksToDo")
     private TaskList tasksToDo;
     @Qualifier("tasksInProgress")
     private TaskList tasksInProgress;
-    @Autowired
     @Qualifier("tasksDone")
     private TaskList tasksDone;
 

@@ -42,5 +42,4 @@ public class BoardTestSuite {
         Assert.assertEquals("New task", board.getDoneList().getTasks().get(3));
     }
 
-
 }
