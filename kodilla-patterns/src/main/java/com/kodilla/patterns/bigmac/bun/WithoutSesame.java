@@ -4,4 +4,5 @@ public class WithoutSesame extends Bun {
     public WithoutSesame(String kindOfBun) {
         super(kindOfBun);
     }
+
 }

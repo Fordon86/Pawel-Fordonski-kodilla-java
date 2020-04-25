@@ -67,4 +67,5 @@ public class Bigmac {
                 ", ingredients=" + ingredients +
                 '}';
     }
+
 }

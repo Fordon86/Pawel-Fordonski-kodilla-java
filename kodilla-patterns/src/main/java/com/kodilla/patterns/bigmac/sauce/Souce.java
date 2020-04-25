@@ -16,4 +16,5 @@ public class Souce {
     public static String getSouceKind () {
         return souceKind;
     }
+
 }

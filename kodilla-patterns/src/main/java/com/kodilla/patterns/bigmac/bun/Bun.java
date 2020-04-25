@@ -15,4 +15,5 @@ public class Bun {
     public static String getKindOfBun() {
         return kindOfBun;
     }
+
 }
