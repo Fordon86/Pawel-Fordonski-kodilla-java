@@ -1,11 +1,1 @@
- |  |  |wQ|wP|  |  |  |  |  |  |
- |  |  |  |  |  |  |  |  |  |  |
- |  |  |  |  |  |  |  |  |  |  |
- |  |  |  |  |  |  |  |  |  |  |
- |  |  |  |  |  |  |  |  |  |  |
- |  |  |  |  |  |  |  |  |  |  |
- |  |  |  |  |  |  |  |  |  |  |
- |  |  |  |  |  |  |  |  |  |  |
- |  |  |  |  |  |  |  |  |  |  |
- |  |  |  |  |  |  |  |bP|  |  |
-
+ Bigmac{bun='com.kodilla.patterns.bigmac.bun.Bun@185138eb', burgers=3, sauce='com.kodilla.patterns.bigmac.sauce.Souce@debe333', ingredients=[mushrooms, onion]}

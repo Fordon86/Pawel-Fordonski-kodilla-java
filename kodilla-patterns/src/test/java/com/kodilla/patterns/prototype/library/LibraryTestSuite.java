@@ -3,12 +3,14 @@ package com.kodilla.patterns.prototype.library;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.time.LocalDate;
+
 public class LibraryTestSuite {
     @Test
     public void testGetBooks() {
-        Book book1 = new Book("Book1","Zdzich1",1981);
-        Book book2 = new Book("Book2","Zdzich2",1982);
-        Book book3 = new Book("Book3","Zdzich3",1983);
+        Book book1 = new Book("Book1","Zdzich1", LocalDate.of(1985,10,10));
+        Book book2 = new Book("Book2","Zdzich2",LocalDate.of(1982,11,11));
+        Book book3 = new Book("Book3","Zdzich3",LocalDate.of(1983,9,9));
 
         Library library = new Library("Drama");
         library.getBooks().add(book1);

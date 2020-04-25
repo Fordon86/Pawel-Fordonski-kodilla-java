@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-25T15:09:09" hostname="Fordon" time="0.022">
+  <properties/>
+  <testcase name="testBigmacOrder" classname="com.kodilla.patterns.builder.bigmac.BigmacTestSuite" time="0.022"/>
+  <system-out><![CDATA[Bigmac{bun='com.kodilla.patterns.bigmac.bun.Bun@185138eb', burgers=3, sauce='com.kodilla.patterns.bigmac.sauce.Souce@debe333', ingredients=[mushrooms, onion]}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
