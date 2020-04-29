@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-28T20:03:49" hostname="Fordon" time="0.003">
+  <properties/>
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.003"/>
+  <system-out><![CDATA[Library{name='Drama', books=[Book{title='Book2', author='Zdzich2', publicationDate=1982-11-11}, Book{title='Book1', author='Zdzich1', publicationDate=1985-10-10}]}
+Library{name='Clone Drama 1', books=[Book{title='Book2', author='Zdzich2', publicationDate=1982-11-11}, Book{title='Book1', author='Zdzich1', publicationDate=1985-10-10}]}
+Library{name='Clone Drama 2', books=[Book{title='Book3', author='Zdzich3', publicationDate=1983-09-09}, Book{title='Book2', author='Zdzich2', publicationDate=1982-11-11}, Book{title='Book1', author='Zdzich1', publicationDate=1985-10-10}]}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

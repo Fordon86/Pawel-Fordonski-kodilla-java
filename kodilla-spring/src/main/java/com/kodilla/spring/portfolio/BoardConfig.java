@@ -11,19 +11,19 @@ import java.util.List;
 
 @Configuration
 public class BoardConfig {
-    @Qualifier("tasksToDo")
+  /*  @Qualifier("tasksToDo")
     private TaskList tasksToDo;
     @Qualifier("tasksInProgress")
     private TaskList tasksInProgress;
     @Qualifier("tasksDone")
-    private TaskList tasksDone;
+    private TaskList tasksDone;*/
 
     @Bean
     public Board getBoard (){
         Board board = new Board();
-        board.setToDoList(tasksToDo);
-        board.setInProgressList(tasksInProgress);
-        board.setDoneList(tasksDone);
+        board.setToDoList(getTaskToDo());
+        board.setInProgressList(getTaskInProgress());
+        board.setDoneList(getDone());
 
         return board;
     }
