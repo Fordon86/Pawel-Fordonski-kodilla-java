@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 
 //@Entity
 public class Item {
-/*    private int id;
+    private int id;
     private Product product;
     private BigDecimal price;
     private int quantity;
@@ -59,5 +59,5 @@ public class Item {
 
     public void setValue(BigDecimal value) {
         this.value = value;
-    }*/
+    }
 }

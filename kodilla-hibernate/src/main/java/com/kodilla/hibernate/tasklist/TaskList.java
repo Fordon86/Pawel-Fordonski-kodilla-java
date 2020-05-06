@@ -1,7 +1,6 @@
 package com.kodilla.hibernate.tasklist;
 
 import com.kodilla.hibernate.task.Task;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -26,7 +25,7 @@ public final class TaskList {
     @Id
     @GeneratedValue
     @NotNull
-    @Column (unique = true)
+    @Column (name = "ID", unique = true)
     public int getId() {
         return id;
     }

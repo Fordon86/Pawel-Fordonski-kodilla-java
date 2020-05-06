@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
-//@Table(name = "\"TASKS\"")
+@Table(name = "TASKS")
 public final class Task {
     private int id;
     private String description;
@@ -27,24 +27,23 @@ public final class Task {
     @Id
     @GeneratedValue
     @NotNull
-//    @Column(name = "ID", unique = true)
-    @Column(unique = true)
+    @Column(name = "ID", unique = true)
     public int getId() {
         return id;
     }
 
-//    @Column(name = "DESCRIPTION")
+    @Column(name = "DESCRIPTION")
     public String getDescription() {
         return description;
     }
 
     @NotNull
-//    @Column(name="CREATED")
+    @Column(name="CREATED")
     public Date getCreated() {
         return created;
     }
 
-//    @Column(name="DURATION")
+    @Column(name="DURATION")
     public int getDuration() {
         return duration;
     }
@@ -66,7 +65,7 @@ public final class Task {
     }
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//    @JoinColumn(name = "TASKS FINANCIALI ID")
+    @JoinColumn(name = "TASKS FINANCIALI ID")
     public TaskFinancialDetails getTaskFinancialDetails() {
         return taskFinancialDetails;
     }
@@ -75,7 +74,7 @@ public final class Task {
         this.taskFinancialDetails = taskFinancialDetails;
     }
     @ManyToOne
-//    @JoinColumn(name = "TASKLIST ID")
+    @JoinColumn(name = "TASKLIST ID")
     public TaskList getTaskList() {
         return taskList;
     }

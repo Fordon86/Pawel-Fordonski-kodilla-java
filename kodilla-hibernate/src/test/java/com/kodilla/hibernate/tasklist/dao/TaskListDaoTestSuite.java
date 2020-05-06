@@ -21,7 +21,7 @@ public class TaskListDaoTestSuite {
     @Autowired
     private TaskListDao taskListDao;
     private static final String DESCRIPTION = "Test";
-    private static final String LISTNAME = "ToDo tasks" ;
+    private static final String LISTNAME = "ToDo tasks";
 
     @Test
     public void testFindByListName() {
@@ -41,7 +41,7 @@ public class TaskListDaoTestSuite {
         taskListDao.deleteById(id);
     }
 
-    @Test
+  /*  @Test
     public void testTaskListDaoSaveWithTasks() {
         //Given
         Task task = new Task("Test: Learn Hibernate", 14);
@@ -65,6 +65,6 @@ public class TaskListDaoTestSuite {
 
         //CleanUp
         taskListDao.deleteById(id);
-    }
+    }*/
 
 }

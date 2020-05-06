@@ -16,11 +16,11 @@ public class Product {
     public Product(String name) {
         this.name = name;
     }
+
     @Id
     @GeneratedValue
     @NotNull
-//    @Column(name = "PRODUCT_ID", unique = true)
-    @Column(unique = true)
+    @Column(name = "PRODUCT_ID", unique = true)
     public int getId() {
         return id;
     }
@@ -29,7 +29,7 @@ public class Product {
         this.id = id;
     }
     @NotNull
-//    @Column(name = "PRODUCT_NAME")
+    @Column(name = "PRODUCT_NAME")
     public String getName() {
         return name;
     }
