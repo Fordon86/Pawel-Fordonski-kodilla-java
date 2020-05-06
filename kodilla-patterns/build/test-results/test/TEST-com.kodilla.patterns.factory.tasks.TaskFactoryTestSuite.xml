@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-04-28T20:03:49" hostname="Fordon" time="0.001">
-  <properties/>
-  <testcase name="testShoppingTask" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.0"/>
-  <testcase name="testDrivingTask" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.0"/>
-  <testcase name="testPaintingTask" classname="com.kodilla.patterns.factory.tasks.TaskFactoryTestSuite" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
