@@ -46,17 +46,22 @@ public class DbManagerTestSuite {
         DbManager dbManager = DbManager.getInstance();
 
         //When
-        String sqlQuery = "SELECT * FROM USERS";
-        String sqlQueryPosts = "SELECT * FROM POSTS";
+        String sqlQuery = " SELECT U.FIRSTNAME, U.LASTNAME " +
+                "FROM USERS U JOIN posts P ON U.ID = P.USER_ID " +
+                "GROUP BY U.ID " +
+                "HAVING COUNT(*) > 1;";
         Statement statement = dbManager.getConnection().createStatement();
-        Statement statementPosts = dbManager.getConnection().createStatement();
         ResultSet rs = statement.executeQuery(sqlQuery);
-        ResultSet rsp = statement.executeQuery(sqlQueryPosts);
 
         //Then
-        
-
-
+        int counter = 0;
+        while(rs.next()) {
+            System.out.println(rs.getString("FIRSTNAME") + ", " +
+                    rs.getString("LASTNAME"));
+            counter++;
+        }
+        rs.close();
+        statement.close();
+        Assert.assertEquals(1, counter);
     }
-
 }
