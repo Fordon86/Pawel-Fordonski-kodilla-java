@@ -28,17 +28,19 @@ public class TaskListDaoTestSuite {
         //GIVEN
         TaskList taskList = new TaskList("Zdzich", DESCRIPTION);
         taskListDao.save(taskList);
+        int id = taskList.getId();
+
         String listName = taskList.getListName();
 
         //WHEN
         List<TaskList> readTasks = taskListDao.findByListName(listName);
 
         //Then
-        Assert.assertEquals(6, readTasks.size());
+        Assert.assertEquals(1, readTasks.size());
 
         //CleanUp
-        int id = taskList.getId();
         taskListDao.deleteById(id);
+
     }
 
   /*  @Test
