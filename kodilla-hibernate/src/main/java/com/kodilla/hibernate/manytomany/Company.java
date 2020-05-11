@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
+
 @NamedNativeQuery(
         name = "Company.retrieveCompanyName",
         query = "SELECT * FROM COMPANIES" +
@@ -54,6 +55,5 @@ public class Company {
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
     }
-
 
 }

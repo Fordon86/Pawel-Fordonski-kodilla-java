@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
+
 @NamedQuery(
         name = "Employee.retrieveLastName",
         query =  " FROM Employee WHERE lastname like 'S%'"
@@ -68,4 +69,5 @@ public class Employee {
     public void setCompanies(List<Company> companies) {
         this.companies = companies;
     }
+
 }
