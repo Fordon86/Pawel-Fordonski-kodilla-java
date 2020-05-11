@@ -4,7 +4,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-
 @NamedNativeQuery(
         name = "Company.retrieveCompanyName",
         query = "SELECT * FROM COMPANIES" +

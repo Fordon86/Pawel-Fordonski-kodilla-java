@@ -18,6 +18,7 @@ public class CompanyDaoTestSuite {
 
     @Autowired
     CompanyDao companyDao;
+    @Autowired
     EmployeeDao employeeDao;
 
     @Test
@@ -93,7 +94,7 @@ public class CompanyDaoTestSuite {
         companyDao.deleteAll();
 
     }
-    @Ignore
+
     @Test
     public void testEmployeeFinder(){
 
