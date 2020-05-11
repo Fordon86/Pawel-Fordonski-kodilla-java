@@ -28,7 +28,7 @@ public class TaskFinancialDetailsDaoTestSuite {
         List<TaskFinancialDetails> resultList = taskFinancialDetailsDao.findByPaid(false);
 
         //Then
-        Assert.assertEquals(2, resultList.size());
+        Assert.assertEquals(12, resultList.size());
 
         //CleanUp
         taskFinancialDetailsDao.deleteById(id);

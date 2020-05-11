@@ -5,6 +5,12 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedNativeQuery(
+        name = "Company.retrieveCompanyName",
+        query = "SELECT * FROM COMPANIES" +
+                " WHERE COMPANY_NAME like 'Sof%'",
+        resultClass = Company.class
+)
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
@@ -40,8 +46,8 @@ public class Company {
     private void setName(String name) {
         this.name = name;
     }
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
 
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
     public List<Employee> getEmployees() {
         return employees;
     }
@@ -49,4 +55,6 @@ public class Company {
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
     }
+
+
 }

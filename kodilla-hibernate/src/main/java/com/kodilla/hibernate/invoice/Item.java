@@ -1,15 +1,20 @@
 package com.kodilla.hibernate.invoice;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
-//@Entity
+@Entity
+@Table(name = "ITEM")
 public class Item {
     private int id;
     private Product product;
     private BigDecimal price;
     private int quantity;
     private BigDecimal value;
+    private List<Item> item = new ArrayList<>();
 
     public Item (){
     }
@@ -21,6 +26,10 @@ public class Item {
         this.value = value;
     }
 
+    @Id
+    @GeneratedValue
+    @NotNull
+    @Column(name = "PRODUCT_ID", unique = true)
     public int getId() {
         return id;
     }
@@ -29,14 +38,18 @@ public class Item {
         this.id = id;
     }
 
+/*    @NotNull
+    @Column(name = "PRODUCT")
     public Product getProduct() {
         return product;
-    }
+    }*/
 
     public void setProduct(Product product) {
         this.product = product;
     }
 
+    @NotNull
+    @Column(name = "PRICE")
     public BigDecimal getPrice() {
         return price;
     }
@@ -45,6 +58,8 @@ public class Item {
         this.price = price;
     }
 
+    @NotNull
+    @Column(name = "QUANTITY")
     public int getQuantity() {
         return quantity;
     }
@@ -53,11 +68,27 @@ public class Item {
         this.quantity = quantity;
     }
 
+    @NotNull
+    @Column(name = "VALUE")
     public BigDecimal getValue() {
         return value;
     }
 
     public void setValue(BigDecimal value) {
         this.value = value;
+    }
+
+    @OneToMany (
+            targetEntity = Product.class,
+            mappedBy = "item",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
+    public List<Item> getItem() {
+        return item;
+    }
+
+    public void setItem(List<Item> item) {
+        this.item = item;
     }
 }
