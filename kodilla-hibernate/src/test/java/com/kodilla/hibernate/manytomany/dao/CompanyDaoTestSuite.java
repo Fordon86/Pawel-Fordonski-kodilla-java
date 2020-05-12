@@ -84,7 +84,7 @@ public class CompanyDaoTestSuite {
         //When
 
         companyDao.saveAll(companyList);
-        List <Company> retrieveCompanyNameQueries = companyDao.retrieveCompanyName();
+        List <Company> retrieveCompanyNameQueries = companyDao.retrieveCompanyName("Sof%");
 
         //Then
         Assert.assertEquals(1, retrieveCompanyNameQueries.size());
@@ -111,7 +111,7 @@ public class CompanyDaoTestSuite {
         //When
         employeeDao.saveAll(employeeList);
 
-        List <Employee> retrieveNameQueries = employeeDao.retrieveLastName();
+        List <Employee> retrieveNameQueries = employeeDao.retrieveLastName("Smith");
 
         //Then
         Assert.assertEquals(1, retrieveNameQueries.size());

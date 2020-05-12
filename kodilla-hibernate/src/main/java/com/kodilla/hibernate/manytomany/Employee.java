@@ -7,15 +7,17 @@ import java.util.List;
 
 @NamedQuery(
         name = "Employee.retrieveLastName",
-        query =  " FROM Employee WHERE lastname like 'S%'"
+        query =  " FROM Employee WHERE lastname =:NAMEPARAMETER  "
 )
 @Entity
 @Table(name = "EMPLOYEES")
+
 public class Employee {
     private int id;
     private String firstname;
     private String lastname;
     private List<Company> companies = new ArrayList<>();
+
     public Employee() {
     }
 
