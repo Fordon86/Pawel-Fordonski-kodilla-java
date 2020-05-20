@@ -2,13 +2,14 @@ package com.kodilla.hibernate.invoice;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Entity
 @Table(name = "PRODUCT")
 public class Product {
     private int id;
     private String name;
-    private Item item;
+    private List <Item> item;
 
     public Product(){
     }
@@ -38,13 +39,17 @@ public class Product {
         this.name = name;
     }
 
-    @ManyToOne
-    @JoinColumn (name = "ITEM")
-    public Item getItem() {
+    @OneToMany (
+            targetEntity = Item.class,
+            mappedBy = "product",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
+    public List<Item> getItem() {
         return item;
     }
 
-    public void setItem(Item item) {
+    public void setItem(List<Item> item) {
         this.item = item;
     }
 }
