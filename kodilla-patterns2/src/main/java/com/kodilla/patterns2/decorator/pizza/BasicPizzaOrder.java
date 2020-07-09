@@ -1,4 +1,5 @@
 package com.kodilla.patterns2.decorator.pizza;
+
 import java.math.BigDecimal;
 
 public class BasicPizzaOrder implements PizzaOrder{
@@ -12,4 +13,5 @@ public class BasicPizzaOrder implements PizzaOrder{
     public String getPizzaDescription() {
         return "Basic pizza";
     }
+
 }
