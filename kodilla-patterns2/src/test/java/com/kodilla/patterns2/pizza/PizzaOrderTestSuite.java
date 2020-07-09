@@ -57,6 +57,4 @@ public class PizzaOrderTestSuite {
         assertEquals("Basic pizza with add cheese with add salami with add pepper with add onion", description);
     }
 
-
-
 }

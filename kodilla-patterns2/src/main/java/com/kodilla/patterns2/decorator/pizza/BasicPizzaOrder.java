@@ -8,7 +8,6 @@ public class BasicPizzaOrder implements PizzaOrder{
     public BigDecimal getPizzaPrice() {
         return new BigDecimal (15);
     };
-
     @Override
     public String getPizzaDescription() {
         return "Basic pizza";
