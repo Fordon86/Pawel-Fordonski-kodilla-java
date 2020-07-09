@@ -68,7 +68,7 @@ public class CompanyDaoTestSuite {
     }
 
     @Test
-        public void testCompanyFinder(){
+    public void testCompanyFinder(){
 
         //Given
 
