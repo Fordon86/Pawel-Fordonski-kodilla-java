@@ -4,4 +4,5 @@ public class StudentTask1 extends StudentTask {
     public StudentTask1() {
         super("Task 1");
     }
+
 }

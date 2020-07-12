@@ -21,11 +21,10 @@ public class HomeworkTestSuit {
         //When
         task1.addTask("Homework to check");
         task2.addTask("Homework to check");
-        //Then
 
+        //Then
         assertEquals(2,zdzich.getUpdateCount());
         assertEquals(1,jach.getUpdateCount());
-
-
     }
+
 }
