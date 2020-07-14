@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.library.BookDirectoryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-09T20:18:49" hostname="Fordon" time="0.28">
+  <properties/>
+  <testcase name="testListBooksInHandsOf1" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.28"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -19,11 +19,11 @@ public class WatcherOrderFacade {
     }*/
 
     @Around("execution( * com.kodilla.patterns2.facade.api.OrderFacade.processOrder(..))")
-//            "&& args(savedLog)")
+//            && args(savedLog)")
     public Object logEvent (final ProceedingJoinPoint joinPoint) throws Throwable {
         try {
             Object result = joinPoint.proceed();
-            System.out.println("Log: " + joinPoint.getTarget().toString());
+            System.out.println("Log: " + (joinPoint.getTarget()));
             System.out.println("Log: " + joinPoint.getArgs().toString());
             System.out.println("Log: " + joinPoint.getClass().getName());
             ///System.out.println("dsdas" + joinPoint);
