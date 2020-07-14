@@ -18,4 +18,5 @@ public class MedianAdaptee implements BookStatistics {
         Statistics theAverage = new Statistics();
         return theAverage.averagePublicationYear(books);
     }
+
 }

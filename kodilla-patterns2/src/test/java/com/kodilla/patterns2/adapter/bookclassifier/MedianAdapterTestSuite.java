@@ -28,4 +28,5 @@ public class MedianAdapterTestSuite {
         //Then
         assertEquals(1995,result);
     }
+
 }

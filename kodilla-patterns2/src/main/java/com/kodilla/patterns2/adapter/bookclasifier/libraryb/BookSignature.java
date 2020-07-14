@@ -10,4 +10,5 @@ public class BookSignature {
     public String getSignature() {
         return signature;
     }
+
 }

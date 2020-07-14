@@ -17,6 +17,7 @@ public class MedianAdapter extends MedianAdaptee implements Classifier {
         }
         return medianaPublicationYear(booksMap);
     }
+
 }
 
 
