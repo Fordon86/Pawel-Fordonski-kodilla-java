@@ -50,4 +50,5 @@ public class Book {
         result = 31 * result + publicationYear;
         return result;
     }
+
 }

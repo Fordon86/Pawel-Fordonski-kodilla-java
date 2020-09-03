@@ -21,7 +21,12 @@ public class BookLibrary {
     }
     LibraryUser libraryUser;
 
-    public void listBooksInHandsOf (LibraryUser libraryUser) {
-        this.libraryUser = libraryUser;
+    // list books borrowed by libraryUser
+
+    public List<Book> listBooksInHandsOf(LibraryUser libraryUser){
+        List<Book> bookList = new ArrayList<Book>();
+        bookList = libraryDatabase.listBooksInHandsOf(libraryUser);
+        return bookList;
     }
+
 }
