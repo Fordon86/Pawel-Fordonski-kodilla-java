@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.library.BookDirectoryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-09T20:18:49" hostname="Fordon" time="0.28">
+<testsuite name="com.kodilla.testing.library.BookDirectoryTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-09-03T20:33:06" hostname="Fordon" time="0.364">
   <properties/>
-  <testcase name="testListBooksInHandsOf1" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.28"/>
+  <testcase name="testListBooksWithConditionFragmentShorterThan3" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.323"/>
+  <testcase name="testListBooksWithConditionMoreThan20" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.004"/>
+  <testcase name="testListBooksWithConditionsReturnList" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.0"/>
+  <testcase name="testListBooksInHandsOf0" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.02"/>
+  <testcase name="testListBooksInHandsOf1" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.015"/>
+  <testcase name="testListBooksInHandsOf5" classname="com.kodilla.testing.library.BookDirectoryTestSuite" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
